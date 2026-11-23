@@ -24,6 +24,7 @@ const STATIC = {
   '/icon-512.png': ['icon-512.png', 'image/png'],
   '/icon-maskable-512.png': ['icon-maskable-512.png', 'image/png'],
   '/apple-touch-icon.png': ['apple-touch-icon.png', 'image/png'],
+  '/.well-known/assetlinks.json': ['assetlinks.json', 'application/json'],
 };
 
 // ---- rooms ---------------------------------------------------------------
