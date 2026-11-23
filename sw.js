@@ -1,4 +1,4 @@
-const CACHE = 'aw-tawla-v31-no-voice';
+const CACHE = 'aw-tawla-v32-no-voice';
 const ASSETS = ['/', '/index.html', '/manifest.webmanifest', '/icon-192.png', '/icon-512.png'];
 self.addEventListener('install', event => {
   event.waitUntil((async () => {
@@ -16,7 +16,7 @@ self.addEventListener('activate', event => {
     // Replace already-open older game code once when upgrading.
     if (upgrading) {
       const windows = await self.clients.matchAll({type: 'window'});
-      await Promise.all(windows.map(client => client.navigate(client.url)));
+      windows.forEach(client => { client.navigate(client.url).catch(() => {}); });
     }
   })());
 });
